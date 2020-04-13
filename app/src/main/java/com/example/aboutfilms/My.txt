@@ -1,0 +1,31 @@
+О Андройд
+http://developer.alexanderklimov.ru/android/
+
+imageView
+https://tutorialwing.com/android-imageview-using-kotlin-example/
+https://o7planning.org/ru/10531/android-imageview-tutorial
+https://habr.com/ru/sandbox/42926/
+
+button
+http://developer.alexanderklimov.ru/android/counter-kot.php
+
+вторая Activety
+https://metanit.com/java/android/1.5.php
+https://stackoverflow.com/questions/45518139/kotlin-android-start-new-activity
+https://ru.stackoverflow.com/questions/451754/%D0%9A%D0%B0%D0%BA-%D0%B7%D0%B0%D0%BA%D1%80%D1%8B%D1%82%D1%8C-activity
+
+
+Картинка в TextView
+https://android-arsenal.com/details/1/1793
+https://stackoverflow.com/questions/2248759/how-to-layout-text-to-flow-around-an-image
+https://www.cyberforum.ru/android-dev/thread1450001.html
+https://android--code.blogspot.com/2020/02/android-kotlin-ktx-imagespan-example.html
+https://habr.com/ru/post/155879/
+https://coderoad.ru/17313898/%D0%BE%D0%B1%D1%82%D0%B5%D0%BA%D0%B0%D0%BD%D0%B8%D0%B5-%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%B0-%D0%B2%D0%BE%D0%BA%D1%80%D1%83%D0%B3-%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B2-android
+https://riptutorial.com/ru/android/example/18286/textview-%D1%81-%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC
+
+
+//android:drawableLeft="@drawable/film2"
+
+onActivityResult
+https://startandroid.ru/ru/uroki/vse-uroki-spiskom/69-urok-30-podrobnee-pro-onactivityresult-zachem-nuzhny-requestcode-i-resultcode.html

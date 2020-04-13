@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">About Films</string>
+    <string name="button">Детали</string>
+    <string name="todo">TODO</string>
+    <string name="TextAboutFilm1">Это фильм первый</string>
+    <string name="TextAboutFilm2">Это фильм второй</string>
+    <string name="txtviewAboutName">Название фильма </string>
+    <string name="todo2">TODO</string>
+    <string name="textview">TextView</string>
+    <string name="txtviewAboutFilmGenre">Жанр фильма, год создания</string>
+    <string name="txtviewAboutFilmContent">Содержание фильма</string>
+    <string name="textBtnAboutClose">Закрыть</string>
+    <string name="textBtnAboutShare">Поделиться</string>
+    <string name="txtBtnAboutClose">Закрыть</string>
+    <string name="txtBtnAboutShare">Поделиться</string>
+    <string name="checkboxFilm1">Нравится</string>
+    <string name="EditTextComments">Комментарии</string>
+    <string name="editTextComment"></string>
+    <string name="editTextCommentsHINT">Введите текст</string>
+    <string name="chooser_title">Share</string>
+</resources>

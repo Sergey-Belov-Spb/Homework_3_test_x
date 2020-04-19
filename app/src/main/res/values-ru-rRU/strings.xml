@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">О фильмах</string>
+    <string name="textBtnAboutClose">Закрыть</string>
+    <string name="txtBtnSelectTheme">Сменить тему</string>
+    <string name="txtBtnAboutClose">Закрыть</string>
+</resources>

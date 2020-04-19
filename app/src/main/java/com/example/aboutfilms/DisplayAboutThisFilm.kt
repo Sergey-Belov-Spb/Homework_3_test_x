@@ -1,13 +1,16 @@
 package com.example.aboutfilms
 
 import android.app.Activity
+import android.app.Dialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.style.ImageSpan
+import android.util.Log
 import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.text.toSpannable
 import androidx.core.text.toSpanned
 import kotlinx.android.synthetic.main.activity_display_about_this_film.*
@@ -43,7 +46,7 @@ class DisplayAboutThisFilm : AppCompatActivity() {
             this.finish();
         }
 
-        btnAboutShare.setOnClickListener(){
+        imageViewShare.setOnClickListener(){
             // Создаем  текстовое сообщение
             val textMessage = "Our message"
             val sendIntent = Intent()
@@ -58,5 +61,11 @@ class DisplayAboutThisFilm : AppCompatActivity() {
                 startActivity(chooser)
             }
         }
+
+        /*this.onBackPressed(){
+
+        }*/
+
     }
+
 }

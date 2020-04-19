@@ -1,17 +1,37 @@
 package com.example.aboutfilms
 import android.app.Activity
+import android.app.Dialog
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 import android.widget.ImageView as ImageView1
 
+private const val KEY_CUSTOM_THEME = "KEY_CUSTOM_THEME"
+
 class MainActivity : AppCompatActivity() {
     private var selectedFilm: Int = 0
+    var selectedTheme = false
+
+
+    private val preference by lazy {
+        PreferenceManager.getDefaultSharedPreferences(this)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        selectedTheme = preference.getBoolean(
+            KEY_CUSTOM_THEME,
+            true
+        )
+        if (selectedTheme) {
+            setTheme(R.style.BlackTheme)
+        } else {
+            setTheme(R.style.DayTheme)
+        }
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -69,6 +89,22 @@ class MainActivity : AppCompatActivity() {
             // start your next activity
             startActivityForResult(intent, 0)
         }
+        btnSelectTheme.setOnClickListener(){
+
+            if (selectedTheme==false) {
+                selectedTheme=true
+
+            } else {
+                selectedTheme=false
+            }
+
+            Log.i("happy", "selectedTheme" + selectedTheme)
+            preference.edit()
+                .putBoolean(KEY_CUSTOM_THEME, selectedTheme)
+                .apply()
+            recreate()
+
+        }
     }
     fun SelectNameFilm(curSelect: Int) {
         textFilm1.setTextColor(0xff000000.toInt())
@@ -95,17 +131,41 @@ class MainActivity : AppCompatActivity() {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putInt(MESS_KEY, selectedFilm)
+
         Log.d("happy", "onSaveInstanceState selectedFilm:[$selectedFilm]")
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         selectedFilm = savedInstanceState.getInt(MESS_KEY,0)
+
         SelectNameFilm(selectedFilm);
         Log.d("happy", "onRestoreInstanceState selectedFilm:[$selectedFilm]")
     }
 
     companion object {
         const val MESS_KEY = "saved_mess_key"
+
     }
+    override fun onBackPressed() {
+        val dialog: Dialog = CustomDialog(this)
+        dialog.setOnShowListener {
+            //DO something
+            Log.d("happy", "onShow")
+        }
+        dialog.setOnDismissListener {
+            //DO something
+            Log.d("happy", "onDismiss")
+        }
+        dialog.setOnCancelListener {
+            //DO something
+            Log.d("happy", "onCancel")
+        }
+        dialog.show()
+
+        //super.onBackPressed()
+
+    }
+
+
 }

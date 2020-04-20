@@ -91,19 +91,13 @@ class MainActivity : AppCompatActivity() {
         }
         btnSelectTheme.setOnClickListener(){
 
-            if (selectedTheme==false) {
-                selectedTheme=true
-
-            } else {
-                selectedTheme=false
-            }
-
+            if (selectedTheme==false) { selectedTheme=true }
+                else { selectedTheme=false }
             Log.i("happy", "selectedTheme" + selectedTheme)
             preference.edit()
                 .putBoolean(KEY_CUSTOM_THEME, selectedTheme)
                 .apply()
             recreate()
-
         }
     }
     fun SelectNameFilm(curSelect: Int) {
@@ -162,10 +156,5 @@ class MainActivity : AppCompatActivity() {
             Log.d("happy", "onCancel")
         }
         dialog.show()
-
-        //super.onBackPressed()
-
     }
-
-
 }
